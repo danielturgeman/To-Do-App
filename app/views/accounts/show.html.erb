@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @account.email %>
+</p>
+
+<p>
+  <strong>Login token:</strong>
+  <%= @account.login_token %>
+</p>
+
+<p>
+  <strong>Token generated at:</strong>
+  <%= @account.token_generated_at %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

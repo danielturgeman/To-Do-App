@@ -1,0 +1,27 @@
+<div class="row registration">
+  <div class="col-md-6 col-md-offset-4">
+    <h1 style="padding: 10px;">Register Your Email</h1>
+
+  <%= form_for(@account) do |f| %>
+    <% if @account.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@account.errors.count, "error") %> prohibited this @account from being saved:</h2>
+        <ul>
+        <% @account.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field email-account" style="padding: 10px;">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="actions register" style="padding: 10px; margin-left: 75px;">
+      <%= f.submit 'Register' %>
+    </div>
+  </div>
+</div>
+  <% end %>
